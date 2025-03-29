@@ -23,10 +23,10 @@ class _categoryscreenState extends State<categoryscreen> {
             mainAxisSpacing: 20),
          children: [
            Text('1',style: TextStyle(color: Colors.white),),
-           Text('1',style: TextStyle(color: Colors.white),),
-           Text('1',style: TextStyle(color: Colors.white),),
-           Text('1',style: TextStyle(color: Colors.white),),
-           Text('1',style: TextStyle(color: Colors.white),),Text('1',style: TextStyle(color: Colors.white),),
+           Text('2',style: TextStyle(color: Colors.white),),
+           Text('3',style: TextStyle(color: Colors.white),),
+           Text('4',style: TextStyle(color: Colors.white),),
+           Text('5',style: TextStyle(color: Colors.white),),Text('1',style: TextStyle(color: Colors.white),),
 
          ],
       ),
