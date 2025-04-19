@@ -4,19 +4,19 @@ import 'package:flutter/material.dart';
 import '../Model/categoryModel.dart';
 
 class GrideData extends StatelessWidget {
-  GrideData({super.key, required this.category,required this.onselected});
-  final void Function( ) onselected;
+  GrideData({super.key, required this.category, required this.onselected});
+  final void Function() onselected;
 
   Category1 category;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap:onselected,
+      onTap: onselected,
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(16),
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             gradient: LinearGradient(colors: [

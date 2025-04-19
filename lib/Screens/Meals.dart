@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Model/Meals.dart';
@@ -6,23 +5,19 @@ import '../Widgets/Meal_Item.dart';
 import '../Widgets/meal_detailsscreen.dart';
 
 class MealsScreen extends StatelessWidget {
-  const MealsScreen({
-    super.key,
-    this.title,
-    required this.meals,
-    required this.onToggleFunc
-  });
+  const MealsScreen(
+      {super.key, this.title, required this.meals, required this.onToggleFunc});
 
   final String? title;
   final List<Meal> meals;
-  final void Function(Meal meal )onToggleFunc;
+  final void Function(Meal meal) onToggleFunc;
 
   void selectMeal(BuildContext context, Meal meal) {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => MealDetailsScreen(
-          meal: meal, onToggleFunc: onToggleFunc,
-
+          meal: meal,
+          onToggleFunc: onToggleFunc,
         ),
       ),
     );

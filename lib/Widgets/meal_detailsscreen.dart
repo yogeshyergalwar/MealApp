@@ -3,14 +3,11 @@ import 'package:flutter/material.dart';
 import '../Model/Meals.dart';
 
 class MealDetailsScreen extends StatelessWidget {
-  const MealDetailsScreen({
-    super.key,
-    required this.meal,
-    required this.onToggleFunc
-  });
+  const MealDetailsScreen(
+      {super.key, required this.meal, required this.onToggleFunc});
 
   final Meal meal;
-  final void Function(Meal meal )onToggleFunc;
+  final void Function(Meal meal) onToggleFunc;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +15,11 @@ class MealDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(meal.title),
         actions: [
-          IconButton(onPressed: (){onToggleFunc(meal);}, icon: Icon( Icons.star))
+          IconButton(
+              onPressed: () {
+                onToggleFunc(meal);
+              },
+              icon: const Icon(Icons.star))
         ],
       ),
       body: SingleChildScrollView(
@@ -57,7 +58,8 @@ class MealDetailsScreen extends StatelessWidget {
             ),
             for (final steps in meal.steps)
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12.0,vertical: 5),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12.0, vertical: 5),
                 child: Text(
                   steps,
                   textAlign: TextAlign.center,

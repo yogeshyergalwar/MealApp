@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MainDrawer extends StatelessWidget {
-   MainDrawer({super.key, required this. onSelectScreen});
+  MainDrawer({super.key, required this.onSelectScreen});
   void Function(String identifier) onSelectScreen;
 
   @override
@@ -35,8 +35,8 @@ class MainDrawer extends StatelessWidget {
                 Text(
                   'Cooking Up!',
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
                 ),
               ],
             ),
@@ -45,14 +45,14 @@ class MainDrawer extends StatelessWidget {
             leading: Icon(
               Icons.restaurant,
               size: 26,
-              color: Theme.of(context).colorScheme.onBackground,
+              color: Theme.of(context).colorScheme.onSurface,
             ),
             title: Text(
               'Meals',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
-                fontSize: 20,
-              ),
+                    color: Theme.of(context).colorScheme.onSurface,
+                    fontSize: 20,
+                  ),
             ),
             onTap: () {
               onSelectScreen('meal');
@@ -62,14 +62,14 @@ class MainDrawer extends StatelessWidget {
             leading: Icon(
               Icons.settings,
               size: 26,
-              color: Theme.of(context).colorScheme.onBackground,
+              color: Theme.of(context).colorScheme.onSurface,
             ),
             title: Text(
               'Filters',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
-                fontSize: 20,
-              ),
+                    color: Theme.of(context).colorScheme.onSurface,
+                    fontSize: 20,
+                  ),
             ),
             onTap: () {
               onSelectScreen('filters');
